@@ -11,15 +11,28 @@ img {
 
 body{
     background-color: rgb(154, 224, 175);
+    background-image: url(https://fondosmil.com/fondo/2257.jpg);
 }
 
-.container{
-    background-color: antiquewhite;
-    border-radius: 25px;
-}
 #lista-publicaciones{
     margin: 35px;
     padding: 5px;
-    border-bottom: 1px;
-    border-color: black;
+    
+}
+
+#container-publicacion{
+    margin: 35;
+    padding: 5px;
+    background-color: antiquewhite;
+    border-radius: 25px;
+}
+
+
+.container-aside{
+    background-color: rgb(98, 185, 124);
+    border-radius: 25px;
+}
+.container_titulo{
+    background-color: rgb(98, 185, 124);
+    border-radius: 25px;
 }
