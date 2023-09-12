@@ -25,14 +25,6 @@ router.get('/admin', (req, res)=> {
     res.render('admin')
 })
 
-// Ruta para devolver la vista admin
-router.get('/admin/:id', (req, res)=> {
-    res.render('editar', { id: req.params.id })
-})
-
-
-
-
 
 // ==================================================
 //         Rutas para CRUD de Publicaciones
