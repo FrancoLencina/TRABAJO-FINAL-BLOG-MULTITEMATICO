@@ -17,7 +17,7 @@ const mandarPublicaciones = (publicaciones, elementoHtml) => {
                 <h5>${publicacion.titulo}</h5>
                 <p class="container-descripcion d-flex align-items-start">${publicacion.descripcion}</p>
                 <p class="font-weight-bold">${publicacion.fecha}</p>
-                <a class="btn btn-success" href="/actualizar/:id" role="button">Actualizar "${publicacion.titulo}"</a>
+                <a class="btn btn-success" href="/actualizar/${publicacion.id}" role="button">Actualizar "${publicacion.titulo}"</a>
                 <a class="btn btn-danger" href="#" role="button">Borrar "${publicacion.titulo}"</a>
             </div>
             </section>

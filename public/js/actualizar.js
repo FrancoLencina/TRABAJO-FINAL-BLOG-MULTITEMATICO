@@ -8,12 +8,13 @@ const obtenerPublicacion = async (id) => {
     return data;
 }
 
+let id ;
 document.addEventListener('DOMContentLoaded', async () => {
-    const id = formGuardar.dataset.id
+     id = formGuardar.dataset.id
     const publicacion = await obtenerPublicacion(id);
 
     const titulo = document.querySelector('#titulo-post')
-    const descripcion = document.querySelector('#detalle-post')
+    const descripcion = document.querySelector('#descripcion-post')
     const url_imagen = document.querySelector('#url-img')
     const fecha = document.querySelector('#fecha')
 
@@ -32,7 +33,7 @@ formGuardar.addEventListener('submit', async (e) => {
 
     // Se capturan los datos del formulario
     const titulo = document.querySelector('#titulo-post').value;
-    const descripcion = document.querySelector('#detalle-post').value;
+    const descripcion = document.querySelector('#descripcion-post').value;
     const url_imagen = document.querySelector('#url-img').value;
     const fecha = document.querySelector('#fecha').value;
 
@@ -42,7 +43,7 @@ formGuardar.addEventListener('submit', async (e) => {
         headers: {
             'Content-Type':'application/json'
         },
-        body: JSON.stringify({ titulo, descripcion, url_imagen, fecha})
+        body: JSON.stringify({titulo, descripcion, url_imagen, fecha})
     })
     const data = await response.json();
 
