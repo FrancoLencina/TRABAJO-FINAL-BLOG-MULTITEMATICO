@@ -2,18 +2,19 @@
 <%-include('partials/navbar')  %>
 
 
-    <div id="container-publicacion" class="container mt-5" >
+    <div class="container mt-5">
         <div class="row">
             <div class="col">
-                <form action="#" id="form-guardar">
+                <h3 class="text-center text-white">Actualizar</h3>
+                <form action="#" id="form-guardar" data-id="<%= id  %>" >
                     <div class="mb-3">
                         <input type="text" id="titulo-post" class="form-control" placeholder="Título del Post">
                     </div>
                     
                     <div class="mb-3">
                         <div class="form-floating">
-                            <textarea id="detalle-post" class="form-control" placeholder="Ingrese una descripción para el Post" id="floatingTextarea2" style="height: 200px"></textarea>
-                            <label for="floatingTextarea2">Ingrese una descripción</label>
+                            <textarea id="detalle-post" class="form-control" placeholder="Ingrese detalle" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Descripción</label>
                           </div>
                     </div>
 
@@ -22,7 +23,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <input type="text" id="url-img" class="form-control" placeholder="Url imagen (opcional)">
+                        <input type="text" id="url-img" class="form-control" placeholder="Url imagen">
                     </div>
                     <button type="submit" id="btn-guardar" class="btn btn-primary">
                         Guardar
@@ -33,8 +34,6 @@
     </div>
 
 
-    <script src="/js/admin.js"></script>
-
-    
+    <script src="/js/actualizar.js"></script>
 
 <%-include('partials/footer')  %>

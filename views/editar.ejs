@@ -1,0 +1,23 @@
+<%-include('partials/header')  %>
+<%-include('partials/navbar')  %>
+
+
+  
+<div class="d-flex justify-content-center text-white">
+    <div class="row-4">
+        <div class="col">
+            <h1 class="text-center py-5">¿Qué Publicación Querés Editar?</h1>
+        </div>
+</div>
+</div>
+<div class="container d-flex justify-content-between">
+    <div class="row" >
+        <div class="col-9" id="container-publicacion">
+            <main class="gap-2 d-flex flex-column" id="lista-publicaciones">
+            </main>
+        </div>
+        <%-include('partials/aside')  %>
+    
+</div>
+<script src="/js/editar.js"></script>
+<%-include('partials/footer')  %>

@@ -1,10 +1,10 @@
-const obtenerPublicaciones = async () => {
+const editarPublicaciones = async () => {
     const response = await fetch('/publicaciones')
     const data = await response.json()
     return data;
 }
 
-const mostrarPublicaciones = (publicaciones, elementoHtml) => {
+const mandarPublicaciones = (publicaciones, elementoHtml) => {
 
     let secciones = "";
 
@@ -17,6 +17,8 @@ const mostrarPublicaciones = (publicaciones, elementoHtml) => {
                 <h5>${publicacion.titulo}</h5>
                 <p class="container-descripcion d-flex align-items-start">${publicacion.descripcion}</p>
                 <p class="font-weight-bold">${publicacion.fecha}</p>
+                <a class="btn btn-success" href="/actualizar/:id" role="button">Actualizar "${publicacion.titulo}"</a>
+                <a class="btn btn-danger" href="#" role="button">Borrar "${publicacion.titulo}"</a>
             </div>
             </section>
         `
@@ -29,15 +31,14 @@ const mostrarPublicaciones = (publicaciones, elementoHtml) => {
 }
 
 
-
 document.addEventListener('DOMContentLoaded', async () => {
 
-    const publicaciones = await obtenerPublicaciones()
+    const publicaciones = await editarPublicaciones()
     console.log(publicaciones)
 
 
     // Modificar el DOM para mostrar las publicaciones
     const main = document.querySelector('#lista-publicaciones')
 
-    mostrarPublicaciones(publicaciones, main)
+    mandarPublicaciones(publicaciones, main)
 })
