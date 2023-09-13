@@ -11,7 +11,7 @@ img {
 
 body{
     background-color: rgb(154, 224, 175);
-    background-image: url(https://fondosmil.com/fondo/2257.jpg);
+    background-image: url(https://i.ytimg.com/vi/XPZb8HoQgH8/maxresdefault.jpg);
 }
 
 #lista-publicaciones{
@@ -23,16 +23,21 @@ body{
 #container-publicacion{
     margin: 35;
     padding: 5px;
-    background-color: antiquewhite;
+    background-color: rgb(219, 197, 0);
     border-radius: 25px;
 }
 
 
 .container-aside{
-    background-color: rgb(98, 185, 124);
+    background-color: rgb(42, 110, 84);
     border-radius: 25px;
+    height: 800px;
 }
-.container_titulo{
-    background-color: rgb(98, 185, 124);
+
+.container-descripcion{
+    background-color: antiquewhite;
+    margin: 35;
+    padding: 80px;
     border-radius: 25px;
+
 }
