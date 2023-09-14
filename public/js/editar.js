@@ -4,6 +4,7 @@ const editarPublicaciones = async () => {
     return data;
 }
 
+
 const mandarPublicaciones = (publicaciones, elementoHtml) => {
 
     let secciones = "";
@@ -17,8 +18,7 @@ const mandarPublicaciones = (publicaciones, elementoHtml) => {
                 <h5>${publicacion.titulo}</h5>
                 <p class="container-descripcion d-flex align-items-start">${publicacion.descripcion}</p>
                 <p class="font-weight-bold">${publicacion.fecha}</p>
-                <a class="btn btn-success" href="/actualizar/${publicacion.id}" role="button">Actualizar "${publicacion.titulo}"</a>
-                <a class="btn btn-danger" href="#" role="button">Borrar "${publicacion.titulo}"</a>
+                <a class="btn btn-primary" href="/editar/${publicacion.id}" role="button">Editar "${publicacion.titulo}"</a>
             </div>
             </section>
         `
@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const publicaciones = await editarPublicaciones()
     console.log(publicaciones)
 
-
     // Modificar el DOM para mostrar las publicaciones
     const main = document.querySelector('#lista-publicaciones')
 
     mandarPublicaciones(publicaciones, main)
 })
+

@@ -30,7 +30,7 @@ router.get('/admin/editar', (req, res)=> {
     res.render('editar', { id: req.params.id })
 })
 
-router.get('/actualizar/:id', (req, res)=> {
+router.get('/editar/:id', (req, res)=> {
     res.render('actualizar', { id: req.params.id })
 })
 // ==================================================

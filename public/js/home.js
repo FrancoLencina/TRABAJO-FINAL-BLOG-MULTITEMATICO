@@ -13,10 +13,10 @@ const mostrarPublicaciones = (publicaciones, elementoHtml) => {
         secciones += `
             <section class="d-flex gap-2">
             <img src="${publicacion.url_imagen}" class="rounded" height=200 >
-            <div class="d-flex flex-column justify-content-between">
+            <div class="d-flex flex-column ">
                 <h5>${publicacion.titulo}</h5>
                 <p class="container-descripcion d-flex align-items-start">${publicacion.descripcion}</p>
-                <p class="font-weight-bold">${publicacion.fecha}</p>
+                <p class="card-text"><small class="text-body-secondary">${publicacion.fecha}</small></p>
             </div>
             </section>
         `
