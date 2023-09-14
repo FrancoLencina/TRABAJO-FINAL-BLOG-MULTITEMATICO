@@ -15,10 +15,10 @@ const mandarPublicaciones = (publicaciones, elementoHtml) => {
             <section class="d-flex gap-2">
             <img src="${publicacion.url_imagen}" class="rounded" height=200 >
             <div class="d-flex flex-column justify-content-between">
-                <h5 class="text-white">${publicacion.titulo}</h5>
+                <h5>${publicacion.titulo}</h5>
                 <p class="container-descripcion d-flex align-items-start">${publicacion.descripcion}</p>
                 <p class="font-weight-bold">${publicacion.fecha}</p>
-                <a class="btn btn-outline-info" href="/editar/${publicacion.id}" role="button">Editar "${publicacion.titulo}"</a>
+                <a class="btn btn-outline-danger" href="/editar/${publicacion.id}" role="button">Editar "${publicacion.titulo}"</a>
             </div>
             </section>
         `
