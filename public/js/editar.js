@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     descripcion.value = publicacion.descripcion;
     url_imagen.value = publicacion.url_imagen;
     fecha.value = publicacion.fecha;
+    
 })
 
 
@@ -70,6 +71,7 @@ borrarPublicacion.addEventListener('click', async (e) => {
     body: JSON.stringify({titulo, descripcion, url_imagen, fecha})
 })
 const data = await response.json();
+
 
 alert(data.msg);
 location.href = "/"
