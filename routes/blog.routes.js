@@ -27,11 +27,11 @@ router.get('/admin', (req, res)=> {
 
 // Ruta para devolver la vista admin
 router.get('/admin/editar', (req, res)=> {
-    res.render('editar', { id: req.params.id })
+    res.render('admin-editar', { id: req.params.id })
 })
 
 router.get('/editar/:id', (req, res)=> {
-    res.render('actualizar', { id: req.params.id })
+    res.render('editar', { id: req.params.id })
 })
 // ==================================================
 //         Rutas para CRUD de Publicaciones
